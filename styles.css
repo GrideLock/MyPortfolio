@@ -31,6 +31,10 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .3s;
+}
+.header.sticky{
+    background: var(--Bg-color);
 }
 .logo{
     font-size: 40px;
@@ -78,6 +82,9 @@ section{
     font-size: 50px;
     font-weight: 700;
     line-height: 1.3;
+}
+.hjemm-info h1 span{
+    color: var(--Text-color);
 }
 .hjemm-info .text-animate{
     position: relative;
@@ -255,6 +262,9 @@ section{
 .heading span{
     color: var(--Base-color);
 }
+span{
+    color: var(--Base-color);
+}
 .about-img{
     position: relative;
     width: 450px;
@@ -355,7 +365,6 @@ section{
 
 .education-content .content:hover::before{
     width: 100%;
-
 }
 
 .education-content .content{
@@ -380,4 +389,277 @@ section{
 .education-content .content p{
     font-size: 1.6rem;
     padding-top: .5rem;
+}
+.ferdigheter{
+     min-height: auto;
+     padding-bottom: 7rem;
+     background: var(--secodary-color);
+}
+.ferdigheter .skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.skills-row .skills-column{
+    flex: 1 1 40rem;
+}
+.skills-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+.skills-box .skills-content{
+    position: relative;
+    border: .3rem solid var(--Base-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+     cursor: pointer;
+}
+
+.skills-box .skills-content::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--Bg-color);
+    z-index: -1;
+    transition: .4s;
+   
+}
+.skills-box .skills-content:hover::before{
+    width: 100%;
+}
+
+.skills-content .progress{
+    padding: 1rem 0;
+}
+.skills-content .progress h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.skills-content .progress h3 span{
+    color: var(--Text-color);
+}
+.skills-content .progress .bar{
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid var(--Base-color);
+   padding: .5rem;
+   margin: 1rem 0;
+}
+.skills-content .progress .bar span{
+    display: block;
+    background: var(--Base-color);
+    height: 100%;
+    border-radius: .3rem;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+    width: 92%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+    width: 68%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+    width: 58%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+    width: 80%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    width: 60%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+    width: 50%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+    width: 45%;
+}
+.kontakt{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+.kontakt form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.kontakt form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.kontakt form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+.kontakt form .input-box .input-field input, .kontakt form  .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    outline: none;
+    border: .2rem solid var(--Base-color);
+    font-size: 1.6rem;
+    color: var(--Text-color);
+    background: transparent;
+}
+.kontakt form .input-box .input-field input::placeholder, .kontakt form  .textarea-field textarea::placeholder{
+    color: var(--Text-color);
+}
+.kontakt form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--secodary-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .4s;
+}
+.kontakt form .input-box .input-field input:focus~.focus, .kontakt form .input-box .input-field input:valid~.focus , .kontakt form .textarea-field textarea:focus~.focus, .kontakt form  .textarea-field textarea::placeholder, .kontakt form .textarea-field textarea:valid~.focus{
+    width: 100%;
+}
+.kontakt form .textarea-field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.kontakt form .textarea-field textarea{
+    resize: none;
+}
+.kontakt form .btn-box.btns .btn{
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--secodary-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-iconTop a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    width: 5rem;
+    border: .2rem solid var(--Base-color);
+    background: var(--Base-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.footer-iconTop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--secodary-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-iconTop a:hover::before{
+    width: 100%;
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--Bg-color);
+    transition: .5s;
+}
+.footer-iconTop a:hover i{
+    color: var(--Base-color);
+}
+/* BREAKPOINTS */
+
+@media (max-width: 1450px) {
+    html{
+        font-size: 45%;
+    }
+    .logo{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+    .navbar ul li a{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        font-size: 3rem;
+    }
+    
+}
+@media (max-width: 991px) {
+    .header{
+        padding: 2rem 4%;
+    }
+    .hjemm{
+        padding: 0 4%;
+    }
+    .logo{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+    .navbar ul li a{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        font-size: 2.5rem;
+    }
+    .footer{
+        padding: 2rem 4%;
+    }
+    
+}
+@media (max-width: 768px){
+    .header{
+        background: var(--Bg-color);
+    }
+    #menu-icon{
+        display: block;
+    }
+    .logo{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--Bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+   .navbar.active{
+        transition-delay: 0s;
+        left: 0;
+
+    }
+    .navbar ul li{
+        font-size: 2rem;
+        display: block;
+        margin: 3rem 0;
+    }
+
 }
