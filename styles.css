@@ -95,6 +95,25 @@ section{
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--Base-color);
+    background: linear-gradient(var(--Base-color), var(--Base-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.hjemm-info .text-animate h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--Base-color);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 .hjemm-info p{
     font-size: 18px;
@@ -685,14 +704,75 @@ span{
      .utdanning{
         padding: 15rem 6% 4rem 5%;
     }
-
+    .om-meg .about-content{
+        width: 100%;
+    }
+    .hjemm-info{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
     
 }
-@media (max-width: 400px){
+@media (max-width: 371px){
+    .hjemm{
+        justify-content: center;
+    }
+    .hjemm-info{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
     .hjemm-info h1{
         font-size: 5.2rem;
     }
     .utdanning{
         padding: 10rem 4% 5rem 5%;
+    }
+    .kontakt form .input-box .input-field{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .hjemm-info h1{
+        font-size: 5rem;
+    }
+    .om-meg .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Keyframes animation */
+
+@keyframes  homeBgText{
+    0%, 10%, 100%{
+        background-position: -33rem 0;
+    }    
+    65%, 85%{
+        background-position: 0 0;
+    }
+}
+@keyframes  homeCursorText{
+    0%, 10%, 100%{
+        width: 0;
+    }    
+    65%, 78%, 85%{
+        width: 70%;
+        opacity: 1;
+    }
+    75%, 81%{
+        opacity: 0;
     }
 }
