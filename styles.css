@@ -98,7 +98,7 @@ section{
     background: linear-gradient(var(--Base-color), var(--Base-color));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: 0 0;
+    background-position: -33rem 0;
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -313,6 +313,7 @@ span{
     border-bottom: .5rem solid var(--secodary-color);
     border-left: .5rem solid var(--Base-color);
     border-right: .5rem solid var(--Base-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 .about-content{
     text-align: center;
@@ -774,5 +775,10 @@ span{
     }
     75%, 81%{
         opacity: 0;
+    }
+}
+@keyframes aboutSpinner {
+    100%{
+        transform: translate(-50%, -50% ) rotate(360deg);
     }
 }
